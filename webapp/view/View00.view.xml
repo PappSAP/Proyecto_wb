@@ -16,11 +16,11 @@
 
             <Label
                 text="Valor 1"
-                labelFor="Input0"
+                labelFor="ValInput0"
             />
             <Input
                 width="40%"
-                id="Input0"
+                id="ValInput0"
                 placeholder="Ingrese valor"
                 valueStateText="El valor debe ser numérico"
                 value="{
@@ -29,18 +29,18 @@
                     constraints : {
                         minLength: 1,
                         maxLength: 5
-                    }
-			}"
+                                }
+                        }"
                 change="onChangeInput0"
             />
 
             <Label
                 text="Valor 2"
-                labelFor="Input1"
+                labelFor="ValInput1"
             />
             <Input
                 width="40%"
-                id="Input1"
+                id="ValInput1"
             />
 
             <Button
