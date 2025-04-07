@@ -10,10 +10,11 @@ sap.ui.define([
         },
 
         OnPress : function (oEvent) {
-            let oinput01 = oEvent.getParameter("input0");
-            let oinput0 = oEvent.getParameter()
+            let oInput0 = this.getView().byId("Input0");
+            let oInput1 = this.getView().byId("Input1");
+            //let oinput0 = oEvent.getParameter()
             //MessageToast.show(oItem.Name);
-            MessageToast.show( 'ingreso ' + oinput0.name );
+            MessageToast.show( 'ingreso ' + oInput0.name );
     }
     });
 });
