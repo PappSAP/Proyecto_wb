@@ -10,16 +10,14 @@ sap.ui.define([
     (Controller, Messaging, JSONModel, SimpleType, ValidateException, MessageBox, MessageToast) => {
         "use strict";
 
-        return Controller.extend("proyectowb.controller.View00", {
-            onInit() {
-                var oView = this.getView(),
-				oMM = Messaging;
+		return Controller.extend("sap.m.sample.InputChecked.C", {
 
-			oView.setModel(new JSONModel({ name: "", email: "" }));
-
-			// attach handlers for validation errors
-			oMM.registerObject(oView.byId("nameInput"), true);
-			oMM.registerObject(oView.byId("emailInput"), true);
+			onInit: function () {
+				var oView = this.getView(),
+					oMM = Messaging;
+	
+				oView.setModel(new JSONModel({ valor1: "", email: "" }));
+	
 		},
 
 		_validateInput: function (oInput) {
@@ -39,7 +37,7 @@ sap.ui.define([
 			return bValidationError;
 		},
 
-		onNameChange: function(oEvent) {
+		onValorChange: function(oEvent) {
 			var oInput = oEvent.getSource();
 			this._validateInput(oInput);
 		},
@@ -48,7 +46,7 @@ sap.ui.define([
 			// collect input controls
 			var oView = this.getView(),
 				aInputs = [
-				oView.byId("nameInput"),
+				oView.byId("valor1Input"),
 				oView.byId("emailInput")
 			],
 				bValidationError = false;
