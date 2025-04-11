@@ -42,7 +42,7 @@ sap.ui.define([
 			this._validateInput(oInput);
 		},
 
-		onSubmit: function () {
+		onCalcular: function () {
 			// collect input controls
 			var oView = this.getView(),
 				aInputs = [
