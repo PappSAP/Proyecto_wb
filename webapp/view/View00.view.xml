@@ -1,12 +1,41 @@
-<mvc:View xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" controllerName="proyectowb.controller.View00">
-    <l:VerticalLayout class="sapUiContentPadding" width="100%">
-        <Label text="Valor 1" labelFor="valor1Input"/>
-        <Input id="valor1Input" class="sapUiSmallMarginBottom" placeholder="Engrese un valor" valueStateText="debe ser distinto de 0." value="{     path : '/valor1',     type : 'sap.ui.model.type.String',     constraints : {      minLength: 1,      maxLength: 10     }    }" change="onValorChange"/>
+<mvc:View
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc"
+    controllerName="proyectowb.controller.View00"
+>
+    <l:VerticalLayout
+        class="sapUiContentPadding"
+        width="100%"
+    >
+        <Label
+            text="Valor 1"
+            labelFor="valor1Input"
+        />
+        <Input
+            id="valor1Input"
+            width="10%"
+            class="sapUiTinyMarginTop"
+            placeholder="Engrese un valor"
+            valueStateText="debe ser distinto de 0."
+            value="{     path : '/valor1',     type : 'sap.ui.model.type.Integer',     constraints : {      minLength: 1,      maxLength: 10     }    }"
+            change="onValorChange"
+        />
+        <Label
+            text="Valor 2"
+            labelFor="valor2Input"
+        />
+        <Input
+            id="valor2Input"
+            width="10%"
+            class="sapUiSmallMarginBottom"
+            placeholder="Engrese un valor"
+            valueStateText="debe ser distinto de 0."
+            value="{     path : '/valor2',     type : 'sap.ui.model.type.String',     constraints : {      minLength: 1,      maxLength: 10     }    }"
+            change="onValorChange"
+        />
 
-        <Label text="Valor 2" labelFor="valor2Input"/>
-        <Input id="valor2Input" class="sapUiSmallMarginBottom" placeholder="Engrese un valor" valueStateText="debe ser distinto de 0." value="{     path : '/valor2',     type : 'sap.ui.model.type.String',     constraints : {      minLength: 1,      maxLength: 10     }    }" change="onValorChange"/>
-
-<!--         <Label
+        <!--         <Label
             text="Email"
             labelFor="emailInput"
         />
@@ -21,6 +50,10 @@
 				type: '.customEMailType'
 			}"
         /> -->
-        <Button text="Calcular" press=".onCalcular" icon="sap-icon://simulate"/>
+        <Button
+            text="Calcular"
+            press=".onCalcular"
+            icon="sap-icon://simulate"
+        />
     </l:VerticalLayout>
 </mvc:View>
